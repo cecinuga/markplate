@@ -27,4 +27,4 @@ if __name__ == '__main__':
                 'path': from_path_to_repopath(file),
                 'difficulty': from_path_to_repopath(file).split('/')[0],
                 'language': from_path_to_repopath(file).split('/')[1]
-            } for file in file_list ]
+            } for file in file_list ] 
