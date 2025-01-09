@@ -14,7 +14,7 @@ def recursive_visit(path: str, output: list[str]=[]) -> list[str]:
     if os.path.isfile(path): 
         output.append(path)
     else:
-        for item in listdir(path):
+        for item in listdir(path).reverse():
             if item not in exclude_item:
                 recursive_visit(f'{path}/{item}')
     
