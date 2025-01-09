@@ -9,4 +9,4 @@ Python tool that automates writing markdown based on a callback
 
 
 #### Example 
-./markplate --temp leetcode.jinja --out ./../Leetcode/ --out-file README.md --cb ./callbacks/recursive_file_visit.py --ex-cb-dir ./../Leetcode --exclude [.git,.gitignore,README.md] -username cecinuga 
+python markplate.py --temp leetcode.jinja --out ./../Leetcode/ --out-file README.md --cb ./callbacks/recursive_file_visit.py --ex-cb-dir ./../Leetcode --exclude [.git,.gitignore,README.md] -username cecinuga
