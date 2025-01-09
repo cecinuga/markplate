@@ -5,6 +5,10 @@ from markdownify import markdownify as md
 from jinja2 import Environment, FileSystemLoader
 
 if __name__ == '__main__':
+    #if '--help' in sys.argv[0]:
+
+
+
     templateLoader = FileSystemLoader(searchpath='./templates/')
     templateEnv = Environment(loader=templateLoader)
     template_var_key = [ ]
@@ -53,11 +57,11 @@ if __name__ == '__main__':
         username='cecinuga',
         leetcodes=result
     )
-    markdown = md(render)
+    markdown = md(render)  
 
     output = f'{os.path.abspath(outDir)}/{outFile}'
     open(output, 'rb').close()
-    
+
     with open(output, 'w') as file:
         file.write(markdown)
         file.close()
