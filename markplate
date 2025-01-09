@@ -1,0 +1,5 @@
+#!/usr/bin/python
+
+print('ciao')
+if __name__ == 'main':
+    pass

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<body>
+    <h1>
+        <strong> Leetcode Solutions </strong>
+    </h1>
+    <br>
+
+    <p>
+        Welcome to my Leetcode solutions repository! Here you'll find my solutions to various Leetcode problems, organized by difficulty and topic.
+    </p>
+    <br>
+
+    <h2>
+        <strong> Profile <strong>
+    </h2>
+    <br>
+
+    <a href="https://leetcode.com/u/{{username}}/">Goto: {{username}}</a>
+
+    <table>
+        <tr>
+            <th>N</th>
+            <th>Title</th>
+            <th>Difficulty</th>
+            <th>Language</th>
+        </tr>
+        {% for leetcode in leetcodes %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>
+                    <a href="https://leetcode.com/problems/climbing-stairs/description/{{leetcode.name}}">{{leetcode.name}}</a>
+                </td>
+                <td>
+                    <a href="https://github.com/cecinuga/Leetcode/tree/main/{leetcode.path}">{{leetcode.path}}</a>
+                </td>
+                <td>{{leetcode.difficulty}}</td>
+                <td>{{leetcode.language}}</td>
+            </tr>
+        {% endfor %}    
+    </table>
+</body>
+
