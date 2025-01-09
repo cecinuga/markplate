@@ -5,9 +5,13 @@ from markdownify import markdownify as md
 from jinja2 import Environment, FileSystemLoader
 
 if __name__ == '__main__':
-    #if '--help' in sys.argv[0]:
-
-
+    if '--help' in sys.argv:
+        print('\t--temp\t Jinja template file')
+        print('\t--out\t Output directory')
+        print('\t--out-file\t Output file, goes in output directory')
+        print('\t--cb\t python callbacks file see recursive_file_visit.py for example')
+        print('\t--temp\t Output directory where callbacks produce output')
+        exit()
 
     templateLoader = FileSystemLoader(searchpath='./templates/')
     templateEnv = Environment(loader=templateLoader)
@@ -31,7 +35,6 @@ if __name__ == '__main__':
             raise SyntaxError(f'mandatory argument not submittet: {arg} ')
 
     for key, value in zip(argv[::2], argv[1::2]):
-        print(key, value)
         match key:
             case '--temp':
                 template = templateEnv.get_template(value)
@@ -47,11 +50,9 @@ if __name__ == '__main__':
                 exclude = value
             case _:
                 raise SyntaxError(f'argument not valid: {key}')
-    print('----------------------------------')
     loc = vars()
     callback_result = exec(open(callback_file).read(), globals(), loc)
     result = loc['result']
-    #print(result)
 
     render = template.render(
         username='cecinuga',
