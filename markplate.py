@@ -13,8 +13,6 @@ if __name__ == '__main__':
         print('\t--temp\t Output directory where callbacks produce output')
         exit()
 
-    templateLoader = FileSystemLoader(searchpath='./templates/')
-    templateEnv = Environment(loader=templateLoader)
     template_var_key = [ ]
     template_var_value = [ ]
 
@@ -37,6 +35,8 @@ if __name__ == '__main__':
     for key, value in zip(argv[::2], argv[1::2]):
         match key:
             case '--temp':
+                templateLoader = FileSystemLoader(searchpath='/')
+                templateEnv = Environment(loader=templateLoader)
                 template = templateEnv.get_template(value)
             case '--out':
                 outDir = value
