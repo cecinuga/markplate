@@ -1,0 +1,17 @@
+<body>
+    <h1>
+        <strong>{{data[2]}}</strong>
+    </h1>
+
+    <p>README writed by: <a href="https://github.com/cecinuga/markplate">MARKPLATE</a></p>
+
+
+    {% for algorithm in data[0] %}
+        <h2><strong>{{algorithm.name}} - $\ O({{algorithm.complexity}})$<strong></h2>
+    {% endfor %}
+
+    <img src="{{data[1]}}" >Complexity Analysis<a/> 
+    <br>
+    <br>
+    <h4>All sorting algorithms are in the Cormen notation</h4>
+</body>

@@ -55,8 +55,7 @@ if __name__ == '__main__':
     result = loc['result']
 
     render = template.render(
-        username='cecinuga',
-        leetcodes=result
+        data=result
     )
     markdown = md(render)  
 

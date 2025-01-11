@@ -10,10 +10,10 @@
         Welcome to my Leetcode solutions repository! Here you'll find my solutions to various Leetcode problems, organized by difficulty and topic.
     </p>
 
-    <h2><strong>Problems Resolved: {{ leetcodes|length }}</strong></h2>
+    <h2><strong>Problems Resolved: {{ data[0]|length }}</strong></h2>
     <h2>
         <strong> Profile :
-        <a href="https://leetcode.com/u/{{username}}/">{{username}}</a><strong>
+        <a href="https://leetcode.com/u/{{username}}/">{{data[1]}}</a><strong>
     </h2>
     <br>
 
@@ -29,7 +29,7 @@
             <th>Difficulty</th>
             <th>Language</th>
         </tr>
-        {% for leetcode in leetcodes %}
+        {% for leetcode in data[0] %}
             <tr>
                 <td>{{loop.index}}</td>
                 <td>
