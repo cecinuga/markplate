@@ -50,6 +50,7 @@ if __name__ == '__main__':
                 exclude = value
             case _:
                 raise SyntaxError(f'argument not valid: {key}')
+            
     loc = vars()
     callback_result = exec(open(callback_file).read(), globals(), loc)
     result = loc['result']

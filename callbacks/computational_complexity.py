@@ -18,6 +18,8 @@ def get_complexity(algo):
             return 'n^2'
         case 'horner_method':
             return 'n'
+        case 'max_sub_array':
+            return 'n^2'
 
 def capital_name(name: str) -> str:
     return ' '.join([ f'{name[0].capitalize()}{name[1:]}' for name in name.split('_')])
