@@ -20,6 +20,10 @@ def get_complexity(algo):
             return 'n'
         case 'max_sub_array':
             return 'n^2'
+        case 'random_search':
+            return 'n^2'
+        case 'heap_sort':
+            return 'n log n'
 
 def capital_name(name: str) -> str:
     return ' '.join([ f'{name[0].capitalize()}{name[1:]}' for name in name.split('_')])
