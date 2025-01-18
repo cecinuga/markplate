@@ -43,7 +43,7 @@ if __name__ == '__main__':
     result = [
         algorithms,
         f'./source/{category.lower()}_complexity.png',
-        f'{category} Algorithm Complexity Analisys ( worst case )'
+        f'{category} Algorithm Complexity Analisys ( middle case )'
     ]
 
     
