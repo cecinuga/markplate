@@ -26,6 +26,8 @@ def get_complexity(algo):
             return 'n log n'
         case 'quick_sort':
             return 'n log n'
+        case 'quick_sort':
+            return 'n'
 
 def capital_name(name: str) -> str:
     return ' '.join([ f'{name[0].capitalize()}{name[1:]}' for name in name.split('_')])
@@ -43,7 +45,7 @@ if __name__ == '__main__':
     result = [
         algorithms,
         f'./source/{category.lower()}_complexity.png',
-        f'{category} Algorithm Complexity Analisys ( middle case )'
+        f'{category} Algorithm Complexity Analisys ( worst case )'
     ]
 
     
