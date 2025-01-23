@@ -26,7 +26,7 @@ def get_complexity(algo):
             return 'n log n'
         case 'quick_sort':
             return 'n log n'
-        case 'quick_sort':
+        case 'counting_sort':
             return 'n'
 
 def capital_name(name: str) -> str:
