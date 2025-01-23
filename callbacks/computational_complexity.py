@@ -27,7 +27,9 @@ def get_complexity(algo):
         case 'quick_sort':
             return 'n log n'
         case 'counting_sort':
-            return 'n'
+            return 'n+k'
+        case 'radix_sort':
+            return 'd( n+k )'
 
 def capital_name(name: str) -> str:
     return ' '.join([ f'{name[0].capitalize()}{name[1:]}' for name in name.split('_')])
