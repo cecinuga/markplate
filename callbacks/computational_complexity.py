@@ -28,9 +28,11 @@ def get_complexity(algo):
             return 'n log n'
         case 'counting_sort':
             return 'n+k'
-        case 'radix_sort':
-            return 'd( n+k )'
-
+        case 'square_matrix_multiply':
+            return 'n^3'
+        case 'gauss_algorithm':
+            return 'n^3'
+        
 def capital_name(name: str) -> str:
     return ' '.join([ f'{name[0].capitalize()}{name[1:]}' for name in name.split('_')])
 
