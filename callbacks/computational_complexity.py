@@ -34,7 +34,9 @@ def get_complexity(algo):
             return 'n^3'
         case 'cut_rod_topdown':
             return '2^n'
-        case 'cut_rod_memo_topdown':
+        case 'cut_rod_mem_topdown':
+            return 'n^2'
+        case 'cut_rod_bottomup':
             return 'n^2'
         
         
