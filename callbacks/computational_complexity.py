@@ -34,6 +34,9 @@ def get_complexity(algo):
             return 'n^3'
         case 'cut_rod_topdown':
             return '2^n'
+        case 'cut_rod_memo_topdown':
+            return 'n^2'
+        
         
 def capital_name(name: str) -> str:
     return ' '.join([ f'{name[0].capitalize()}{name[1:]}' for name in name.split('_')])
